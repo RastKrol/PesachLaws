@@ -15,7 +15,8 @@
 <body>
   <div class="container">
     <header class="header">
-      <img src="img/passover.svg" alt="trillo logo" class="logo">
+      <img src="img/passover.svg" alt="kidush cup" class="logo logo--wine" id="logo1">
+      <img src="img/passover.svg" alt="kidush cup" class="logo logo--white is-close" id="logo2">
       <nav class="user-nav">
         <div class="user-nav__user">
           <img src="img/selfy.jpg" alt="User photo" class="user-nav__user-photo">
@@ -25,7 +26,7 @@
         </header>
 
         <div class="content">
-          <nav class="sidebar">
+          <nav class="sidebar" id="sidebar">
             <ul class="side-nav">
               <li class="side-nav__item side-nav__item--active ">
                 <a href="#" class="side-nav__link">
@@ -45,6 +46,43 @@
               </li>
               <li class="side-nav__item">
                 <a href="#" class="side-nav__link">
+                  <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                  </svg> -->
+                  <span>Законы Лекарств</span>
+                </a>
+              </li>
+              </ul>
+  
+              <div class="legal">
+                &copy; 5781 adapted by Avraham Krol. All rights reserved.
+              </div>
+              </nav>
+
+              <!-- ******************************* -->
+                          <!-- SMALL NAVIGATION -->
+              <!-- ******************************* -->
+
+          <nav class="sidebar--small is-close" id="sidebar-small">
+            <ul class="side-nav--small">
+              <li class="side-nav--small__item side-nav__item--active">
+                <a href="#" class="side-nav--small__link">
+                  <svg class="side-nav--small__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                  </svg>
+                  <span>Эрев Песах</span>
+                </a>
+              </li>
+              <li class="side-nav--small__item side-nav__item">
+                <a href="#" class="side-nav--small__link">
+                  <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                  </svg> -->
+                  <span>Кошерование посуды</span>
+                </a>
+              </li>
+              <li class="side-nav--small__item">
+                <a href="#" class="side-nav--small__link">
                   <!-- <svg class="side-nav__icon">
                     <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
                   </svg> -->
@@ -90,8 +128,8 @@
                       Давайте рассмотрим галохос в Шаббес Эрев Песах.</p>
                       <h4 class="detail-header">Четверг - Таанис Бехорим / Бедикас Хомец</h4>
                       <p class="paragraph">В обычный Эрев Песах первенцы мужского пола (бехорим) обязаны поститься. В этом году пост перенесен на четверг. Те
-                      бехорим, которые не хотят поститься, должны присутствовать на сиюме. В четверг вечером после цейс хакочавим (с
-                      наступлением темноты) следует немедленно совершить бедикас хомец. Читаются браха и кол чамира (как обычно).</p>
+                      бехорим, которые не хотят поститься, должны присутствовать на сиюме. В четверг вечером после цейс хакохавим (с
+                      наступлением темноты) следует немедленно совершить бедикас хомец. Читаются браха и кол хамира (как обычно).</p>
                       <h4 class="detail-header">Пятница - Эрев Шаббес</h4>
                       <p class="paragraph">Хомец, необходимый для приема пищи в пятницу вечером и в субботу утром, следует поместить в одноразовый контейнер
                       подальше от всей еды в Песах. Хотя хомец можно покупать и есть в течение всего дня пятницы, по обычаю хомец продают и
@@ -128,7 +166,7 @@
                       мацу до конца времени ахилас хомец.<span style="color:#eb2f64"> (В этом году в Киеве - <strong style="font-size:1.4rem">9:57</strong> ) </span></li>
                       <li class="detail-item">В Шаббат Эрев Песах обычную мацу нельзя есть никому, кроме детей младше шести лет.</li>
                     </ul>
-                    <p class="paragraph">Если кто-то хочет есть хлеб в помещении, он может есть на улице на крыльце или на заднем дворе (если там разрешено
+                    <p class="paragraph">Если кто-то не хочет есть хлеб в помещении, он может есть на улице на крыльце или на заднем дворе (если там разрешено
                     носить с собой, то есть в решус аёхид). Прочтите Хамоци, съешьте халос, затем сметите крошки со стола.
                     Крошки нельзя бросать по ветру или за пределы эрува. Другой вариант, покушайте над салфеткой, и после заверните оставшиеся крошки и смойте, как указано выше. Можно
                     доедать внутри. Биркас Амозон следует читать там, где ели хлеб.
@@ -203,4 +241,5 @@
       </div>
     </div>
   </body>
+  <script src="index.js"></script>
  </html>
