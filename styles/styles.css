@@ -190,12 +190,16 @@ body {
   text-transform: uppercase;
   padding: 1.5rem 3rem 2.5rem;
 }
-.detail-header {
+.detail-header,
+.detail-header-2 {
   color: var(--color-primary-dark);
   font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 1.5rem 3rem 1.5rem;
+  padding: 1.5rem 3rem;
+}
+detail-header-2 {
+  padding: 1.5rem 0;
 }
 .desc {
   font-size: 1.2rem;
@@ -234,11 +238,13 @@ body {
     pointer-events: all;
   }
 }
+.click {
+  font-size: 0.6rem;
+  margin: 0;
+  color: var(--color-grey-dark-1);
+}
 .is-close {
   display: none;
-}
-.is-open {
-  display: block;
 }
 
 .user-nav {
