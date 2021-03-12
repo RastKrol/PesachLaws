@@ -32,7 +32,7 @@ const handleClick = (e) => {
   });
   e.currentTarget.classList.add("side-nav__item--active");
 
-/*   function composedPath(el)  {
+  /*   function composedPath(el)  {
     const path = [];
 
     while (el) {
@@ -51,7 +51,8 @@ const handleClick = (e) => {
 
   if (
     // e.path[0].innerHTML === "Эрев Песах" 
-    e.path[0].children[0].innerHTML === "Эрев Песах"
+    // e.target.innerHTML === "Эрев Песах" ||
+    e.target.children[0].innerHTML === "Эрев Песах"
   ) {
     if (erev.classList.contains("is-close")) {
       erev.classList.remove("is-close");
@@ -64,7 +65,8 @@ const handleClick = (e) => {
 
   if (
     // e.path[0].innerHTML === "Законы Лекарств" 
-    e.path[0].children[0].innerHTML === "Законы Лекарств"
+    // e.target.innerHTML === "Законы Лекарств" ||
+    e.target.children[0].innerHTML === "Законы Лекарств"
   ) {
     if (trufot.classList.contains("is-close")) {
       trufot.classList.remove("is-close");
