@@ -32,48 +32,22 @@ const handleClick = (e) => {
   });
   e.currentTarget.classList.add("side-nav__item--active");
 
-  /*   function composedPath(el)  {
-    const path = [];
-
-    while (el) {
-      path.push(el);
-
-      if (el.tagName === "HTML") {
-        path.push(document);
-        path.push(window);
-
-        return path[0];
-      }
-
-      el = el.parentElement;
-    }
-  } */
-
   if (
-    // e.path[0].innerHTML === "Эрев Песах" 
-    // e.target.innerHTML === "Эрев Песах" ||
     e.target.children[0].innerHTML === "Эрев Песах"
   ) {
     if (erev.classList.contains("is-close")) {
       erev.classList.remove("is-close");
       trufot.classList.add("is-close");
-    } else {
-      trufot.classList.add("is-close");
-      erev.classList.remove("is-close");
     }
   }
+  
 
   if (
-    // e.path[0].innerHTML === "Законы Лекарств" 
-    // e.target.innerHTML === "Законы Лекарств" ||
     e.target.children[0].innerHTML === "Законы Лекарств"
   ) {
     if (trufot.classList.contains("is-close")) {
       trufot.classList.remove("is-close");
       erev.classList.add("is-close");
-    } else {
-      trufot.classList.add("is-close");
-      erev.classList.remove("is-close");
     }
   }
 };
