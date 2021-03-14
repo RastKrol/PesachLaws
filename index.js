@@ -1,24 +1,23 @@
-'use strict'
+"use strict";
 const logo1 = document.getElementById("logo1");
 const logo2 = document.getElementById("logo2");
 const sidebar = document.getElementById("sidebar");
-const link_list = sidebar.querySelectorAll('li');
+const link_list = sidebar.querySelectorAll("li");
 const linkArr = Array.from(link_list);
 const sidebar_small = document.getElementById("sidebar-small");
-const link_list_small = sidebar_small.querySelectorAll('li');
+const link_list_small = sidebar_small.querySelectorAll("li");
 const linkArrSmall = Array.from(link_list_small);
-const erev = document.getElementById('erev');
-const trufot = document.getElementById('trufot');
+const erev = document.getElementById("erev");
+const trufot = document.getElementById("trufot");
 const koshering = document.getElementById("koshering");
 const sections = document.querySelectorAll(".section");
 const sectionArr = Array.from(sections);
-console.log(linkArr[0].children[0].children[0].innerHTML) ;
+console.log(linkArr[0].children[0].children[0].innerHTML);
 console.log(linkArr[0].classList.contains("side-nav__item--active"));
 console.log(sectionArr);
 
-
 /* ******************************* */
-//*FUNCTIONS 
+//*FUNCTIONS
 /* ******************************* */
 const isNotClose = (button) => {
   sections.forEach((item) => {
@@ -27,7 +26,7 @@ const isNotClose = (button) => {
       button.classList.remove("is-close");
     }
   });
-}
+};
 
 // (function sortList() {
 //   let list, i, switching, b, shouldSwitch;
@@ -82,25 +81,24 @@ const isNotClose = (button) => {
   for (var i = 0, l = lis.length; i < l; i++) lis[i].innerHTML = vals[i];
 })();
 
-
 /* ***************************** */
 //*EVENTS
 /* ***************************** */
 
-logo1.addEventListener('click', () => {
+logo1.addEventListener("click", () => {
   if (sidebar_small.classList.contains("is-close")) {
-    sidebar_small.classList.toggle('is-close');
+    sidebar_small.classList.toggle("is-close");
     logo1.classList.toggle("is-close");
     logo2.classList.toggle("is-close");
-  } 
-})
-logo2.addEventListener('click', () => {
+  }
+});
+logo2.addEventListener("click", () => {
   if (!sidebar_small.classList.contains("is-close")) {
-    sidebar_small.classList.toggle('is-close');
+    sidebar_small.classList.toggle("is-close");
     logo1.classList.toggle("is-close");
     logo2.classList.toggle("is-close");
-  } 
-})
+  }
+});
 
 const handleClick = (e) => {
   e.preventDefault();
@@ -114,20 +112,30 @@ const handleClick = (e) => {
   });
   e.currentTarget.classList.add("side-nav__item--active");
 
-  if (
-    e.target.children[0].innerHTML === "Эрев Песах"
-  ) {
-    isNotClose(erev);
-  }
-  
-  if (
-    e.target.children[0].innerHTML === "Законы Лекарств"
-  ) {
-    isNotClose(trufot);
-  }
+  if (typeof e.target.children[0] !== "undefined") {
+    if (e.target.children[0].innerHTML === "Эрев Песах") {
+      isNotClose(erev);
+    }
 
-  if (e.target.children[0].innerHTML === "Кошерование посуды") {
-    isNotClose(koshering);
+    if (e.target.children[0].innerHTML === "Законы Лекарств") {
+      isNotClose(trufot);
+    }
+
+    if (e.target.children[0].innerHTML === "Кошерование посуды") {
+      isNotClose(koshering);
+    }
+  } else {
+    if (e.target.textContent === "Эрев Песах") {
+      isNotClose(erev);
+    }
+
+    if (e.target.textContent === "Законы Лекарств") {
+      isNotClose(trufot);
+    }
+
+    if (e.target.textContent === "Кошерование посуды") {
+      isNotClose(koshering);
+    }
   }
 };
 
