@@ -204,7 +204,6 @@ body {
 .detail-subheader {
   font-size: 1.8rem;
   padding: 0.5rem 3rem;
-  
 }
 .desc {
   font-size: 1.2rem;
@@ -218,12 +217,20 @@ body {
 }
 .ner {
   display: flex;
+  justify-content: space-around;
   padding: inherit;
-  gap: 5px;
 }
 .ner img {
   border-radius: 3px;
   box-shadow: 4px 0 15px var(--color-grey-light-4);
+  width: 80px;
+  height: 80px;
+}
+@media only screen and (max-width: 768px) {
+  .ner img {
+    width: 40px;
+    height:40px;
+  }
 }
 .detail-list {
   list-style: circle;
@@ -245,7 +252,7 @@ body {
   height: 250px;
 }
 @media only screen and (max-width: 600px) {
-  .kosher-list {  
+  .kosher-list {
     height: 300px;
   }
 }
@@ -286,6 +293,12 @@ body {
 .kosher-img {
   width: 100px;
   margin-right: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .kosher-img {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media only screen and (max-width: 480px) {
   .kosher-img {
@@ -534,6 +547,30 @@ body {
     font-size: 1.8rem;
     padding: 1.25rem 2rem;
   }
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 6rem; /* Place the button at the bottom of the page */
+  right: 3rem; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  border-radius: 50%; 
+  background-color: var(--color-primary-light); /* Set a background color */
+  color: var(--color-grey-light-1); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 1rem 0.8rem; /* Some padding */
+  font-size: 1.4rem; /* Increase font size */
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
 
 /* .hotel-view {

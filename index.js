@@ -12,6 +12,7 @@ const trufot = document.getElementById("trufot");
 const koshering = document.getElementById("koshering");
 const sections = document.querySelectorAll(".section");
 const sectionArr = Array.from(sections);
+const mybutton = document.getElementById("myBtn");
 console.log(linkArr[0].children[0].children[0].innerHTML);
 console.log(linkArr[0].classList.contains("side-nav__item--active"));
 console.log(sectionArr);
@@ -27,39 +28,6 @@ const isNotClose = (button) => {
     }
   });
 };
-
-// (function sortList() {
-//   let list, i, switching, b, shouldSwitch;
-//   list = document.getElementById("kosher-list");
-//   switching = true;
-//   /* Make a loop that will continue until
-//       no switching has been done: */
-//   while (switching) {
-//     // start by saying: no switching is done:
-//     switching = false;
-//     b = list.getElementsByTagName("LI");
-//     // Loop through all list-items:
-//     for (i = 0; i < b.length - 1; i++) {
-//       // start by saying there should be no switching:
-//       shouldSwitch = false;
-//       /* check if the next item should
-//           switch place with the current item: */
-//       if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-//         /* if next item is alphabetically
-//             lower than current item, mark as a switch
-//             and break the loop: */
-//         shouldSwitch = true;
-//         break;
-//       }
-//     }
-//     if (shouldSwitch) {
-//       /* If a switch has been marked, make the switch
-//           and mark the switch as done: */
-//       b[i].parentNode.insertBefore(b[i + 1], b[i]);
-//       switching = true;
-//     }
-//   }
-// })();
 
 (function sortUnorderedList(sortDescending) {
   const list = document.getElementById("kosher-list");
@@ -80,6 +48,33 @@ const isNotClose = (button) => {
   // Change the list on the page
   for (var i = 0, l = lis.length; i < l; i++) lis[i].innerHTML = vals[i];
 })();
+
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  }); // For Safari
+  document.documentElement.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  }); // For Chrome, Firefox, IE and Opera
+} 
 
 /* ***************************** */
 //*EVENTS
