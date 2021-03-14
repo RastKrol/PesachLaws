@@ -269,6 +269,11 @@ body {
   margin-bottom: 10px;
   width: 70%;
 }
+@media only screen and (max-width: 480px) {
+  .kosher-paragraph {
+    width: 100%;
+  }
+}
 .kosher-img {
   width: 100px;
   margin-right: 40px;
