@@ -49,8 +49,6 @@ const isNotClose = (button) => {
   for (var i = 0, l = lis.length; i < l; i++) lis[i].innerHTML = vals[i];
 })();
 
-
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
@@ -74,7 +72,7 @@ function topFunction() {
     behavior: "smooth",
     block: "start",
   }); // For Chrome, Firefox, IE and Opera
-} 
+}
 
 /* ***************************** */
 //*EVENTS
