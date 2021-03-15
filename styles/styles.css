@@ -313,7 +313,7 @@ body {
     width: 30%;
     /* height: 40px; */
   }
-
+}
 .logo {
   height: 3.25rem;
   margin-left: 2rem;
@@ -566,7 +566,7 @@ body {
   background-color: var(--color-primary-light); /* Set a background color */
   color: var(--color-grey-light-1); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 1.5rem 1.2rem; /* Some padding */
+  padding: 1.55rem 1.3rem; /* Some padding */
   font-size: 1.1rem; /* Increase font size */
 }
 
