@@ -287,7 +287,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .kosher-paragraph {
-    width: 100%;
+    flex:  0 0 100%;
   }
 }
 .kosher-img {
